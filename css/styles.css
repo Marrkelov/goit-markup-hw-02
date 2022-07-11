@@ -1,100 +1,249 @@
-/* основной цвет фона - #fff 
-основной цвет фона 2 - #2F303A
-цвет жирного текста  - #212121
-цвет не жирного текста - #757575
-синий цвет - #2196F3
-вес главного заголовка - 900.
-вес текста в навигации, имен, фильтра в портфолио - 500.
-вес основного текста - 400.
-вес h2-h3 - 700
-лого - font-family: 'Raleway' 700;
-основной текст - font-family: 'Roboto' 400,500,700,900;*/
-
 :root {
-  --main-background-color: #fff;
-  --secondary-background-color: #2f303a;
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
+  --prymary-bg-color: #ffffff;
+  --secondary-bg-color: #2f303a;
+  --commands-bg-color: #f5f4fa;
+  --bg-botton: #f5f4fa;
+  --cards-bg-color: #eeeeee;
+  --bold-color: #212121;
+  --primary-color: #757575;
+  --white-color: #ffffff;
   --accent-color: #2196f3;
-  --title-text-color: #212121;
-  --primary-text-color: #757575;
+  --footer-color-contact: rgba(255, 255, 255, 0.6);
+  --hover-btn: #188ce8;
 }
-
 body {
-  font-family: "roboto";
+  font-family: var(--primary-font);
+  font-weight: 400;
+  letter-spacing: 0.03em;
   width: 1600px;
-  padding: auto;
-  color: var(--primary-text-color);
-  margin: auto 215px;
+  color: var(--primary-color);
+  background-color: var(--prymary-bg-color);
 }
-
-/* h1 {
-  color: #fff;
+/* ====================== COMPONENT ======================== */
+.link {
+  text-decoration: none;
 }
-h2,
-h3,
-h4,
-h5,
-h5 {
-  color: var(--title-text-color);
-}
-
-ul {
+.list {
   list-style: none;
 }
-
-a {
-  text-decoration: none;
-  color: var(--primary-text-color);
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--bold-color);
 }
-
-header,
-.navigation-list,
-.contact-hd {
-  display: inline-flex;
-} */
-
-/* шапка */
-
+.menu .menu-link.current {
+  color: var(--accent-color);
+}
+/* ===================== /COMPONENT ======================= */
+/* =================  M A I N   P A G E =================== */
+/* ======================= HEADER ========================= */
 .logo {
-  text-decoration: none;
-  white-space: nowrap;
-  padding: 25px 1240px 25px 215px;
-  font-family: "Raleway";
-  font-style: normal;
+  font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
-  letter-spacing: 0.03em;
-  color: #000;
+  line-height: 1.19;
+  color: #000000;
 }
-
 .logo-web {
   color: var(--accent-color);
 }
-
-.navigation-list {
-  list-style: none;
-  color: var(--secondary-text-color);
-  font-style: normal;
+.menu .link:hover,
+.menu .link:focus {
+  color: var(--accent-color);
+}
+.contact .link:hover,
+.contact .link:focus {
+  color: var(--accent-color);
+}
+.menu-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--bold-color);
 }
-
-.contact-hd {
-  list-style: none;
-  color: var(--secondary-text-color);
-  font-style: normal;
+.tel-link,
+.mail-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
+  color: inherit;
 }
-
-/* cap */
-
-.cap {
+/* ====================== /HEADER ====================== */
+/* ======================== HERO ======================= */
+.hero {
+  background-color: var(--secondary-bg-color);
   text-align: center;
-  height: 600px;
-  background-color: var(--secondary-background-color);
 }
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+.hero-btn {
+  width: 200px;
+  height: 50px;
+  left: 700px;
+  top: 430px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  font-family: inherit;
+  color: var(--white-color);
+  background: var(--accent-color);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--hover-btn);
+}
+/* ======================= /HERO ======================= */
+/* ====================== FEATURES ===================== */
+.features-title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.features .list .list-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--bold-color);
+}
+.features .list .list-text {
+  font-size: 14px;
+  line-height: 1.71;
+}
+/* ====================== /FEATURES ===================== */
+/* ======================== DOING ======================= */
+/* ======================== /DOING ======================= */
+/* ======================== COMANDS ====================== */
+.commands {
+  background-color: var(--commands-bg-color);
+}
+.commands .commands-item {
+  width: 270px;
+  height: 368px;
+  left: 515px;
+  top: 1635px;
+  background-color: var(--prymary-bg-color);
+  border-radius: 0px 0px 4px 4px;
+}
+.commands-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--bold-color);
+}
+.commands-position {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+/* ======================= /COMANDS ====================== */
+/* ======================== BASEMENT ======================= */
+.basement {
+  background-color: var(--secondary-bg-color);
+}
+.basement .dark-theme {
+  color: var(--white-color);
+}
+.cnt-address {
+  font-style: normal;
+}
+.cnt .link:hover,
+.cnt .link:focus {
+  color: var(--accent-color);
+}
+.cnt-street .cnt-link {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--white-color);
+}
+.cnt-mail .cnt-link,
+.cnt-tel .cnt-link {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--footer-color-contact);
+}
+/* ======================= /BASEMENT ======================= */
+/* ================= / M A I N   P A G E =================== */
+/* ==================== P O R T F O L I O =================== */
+/* ========================== HERO ========================== */
+.portfolio-title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.portfolio-btn {
+  height: 38px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62px;
+  text-align: center;
+  padding: 6px 22px;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  background: var(--bg-botton);
+  color: var(--bold-color);
+}
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+.cards-list-tile {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--bold-color);
+}
+
+.cards-description {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.cards-item {
+  box-sizing: border-box;
+
+  width: 370px;
+  height: 404px;
+  left: 615px;
+  top: 262px;
+  background: var(--prymary-bg-color);
+  border: 1px solid var(--cards-bg-color);
+}
+/* ========================= /HERO ========================== */
+/* =================== / P O R T F O L I O ================== */
